@@ -2,11 +2,11 @@
 
 package:
   name: libidn2
-  version: "{{ version }}"
+  version: {{ version }}
 
 source:
   url: https://ftp.gnu.org/gnu/libidn/libidn2-{{ version }}.tar.gz
-  sha256: "644b6b03b285fb0ace02d241d59483d98bc462729d8bb3608d5cad5532f3d2f0"
+  sha256: 644b6b03b285fb0ace02d241d59483d98bc462729d8bb3608d5cad5532f3d2f0
 
 build:
   skip: True  # [win]
