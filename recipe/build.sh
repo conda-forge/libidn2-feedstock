@@ -2,6 +2,8 @@
 
 set -o pipefail
 
+autoreconf
+
 ./configure --prefix="${PREFIX}" \
     --enable-shared \
     --disable-static \

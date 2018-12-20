@@ -19,6 +19,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - automake
+    - autoconf
+    - pkg-config
 
 test:
   commands:
