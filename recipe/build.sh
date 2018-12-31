@@ -17,9 +17,9 @@ autoreconf
     --without-gcov \
     2>&1 | tee configure.log
 
-make
-make check
-make install
+make CC="${CC}"
+make check CC="${CC}"
+make install CC="${CC}"
 
 # Save some space
 rm -rf "${PREFIX}/share/info"
