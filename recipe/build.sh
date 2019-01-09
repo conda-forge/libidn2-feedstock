@@ -1,10 +1,10 @@
 #!/bin/bash
-
+set -ex
 set -o pipefail
 
-autoreconf
-
 export CFLAGS="$CFLAGS -std=c99"
+
+autoreconf
 
 ./configure --prefix="${PREFIX}" \
     --enable-shared \
