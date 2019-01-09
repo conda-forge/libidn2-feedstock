@@ -4,6 +4,8 @@ set -o pipefail
 
 autoreconf
 
+export CFLAGS=$CFLAGS -std=c99
+
 ./configure --prefix="${PREFIX}" \
     --enable-shared \
     --disable-static \
@@ -17,7 +19,7 @@ autoreconf
     --without-gcov \
     2>&1 | tee configure.log
 
-make CC="${CC}"
+CC="${CC}" make
 make check CC="${CC}"
 make install CC="${CC}"
 
