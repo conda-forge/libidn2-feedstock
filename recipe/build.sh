@@ -4,7 +4,7 @@ set -o pipefail
 
 autoreconf
 
-export CFLAGS=$CFLAGS -std=c99
+export CFLAGS="$CFLAGS -std=c99"
 
 ./configure --prefix="${PREFIX}" \
     --enable-shared \
