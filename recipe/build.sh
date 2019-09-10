@@ -12,6 +12,7 @@ set -o pipefail
     --disable-gtk-doc-pdf \
     --disable-nls \
     --disable-code-coverage \
+    -disable-silent-rules \
     --without-libiconv-prefix \
     --without-libintl-prefix \
     --without-gcov
