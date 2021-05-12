@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: libidn2
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/libidn/libidn2-{{ version }}.tar.gz
-  sha256: e1cb1db3d2e249a6a3eb6f0946777c2e892d5c5dc7bd91c74394fc3a01cab8b5
+  sha256: 8af684943836b8b53965d5f5b6714ef13c26c91eaa36ce7d242e3d21f5d40f2d
 
 build:
-  skip: True  # [win]
+  skip: true  # [win]
   number: 0
   run_exports:
     # _Amazing_ backwards compatibility so pin to major number:
@@ -31,10 +31,10 @@ test:
     - test -f "${PREFIX}/lib/libidn2${SHLIB_EXT}"
 
 about:
-  home: "https://www.gnu.org/software/libidn/#libidn2"
+  home: https://www.gnu.org/software/libidn/#libidn2
   license: LGPLv2
   license_file: COPYING
-  summary: "Library for internationalized domain names (IDNA2008) support"
+  summary: Library for internationalized domain names (IDNA2008) support
 
 extra:
   recipe-maintainers:
