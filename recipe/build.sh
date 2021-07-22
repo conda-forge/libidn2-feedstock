@@ -1,4 +1,6 @@
 #!/bin/bash
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./build-aux
 
 set -ex
 set -o pipefail
@@ -17,7 +19,9 @@ set -o pipefail
     --without-gcov
 
 make
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 make check
+fi
 make install
 
 # Save some space
