@@ -1,4 +1,4 @@
-{% set version = "2.3.4" %}
+{% set version = "2.3.6" %}
 
 package:
   name: libidn2
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/libidn/libidn2-{{ version }}.tar.gz
-  sha256: 93caba72b4e051d1f8d4f5a076ab63c99b77faee019b72b9783b267986dbb45f
+  sha256: 1068bbb37df793c9958086574e3be2fdeea6e82c23e1261b17a410ebc01fcfcb
 
 build:
   skip: true  # [win]
